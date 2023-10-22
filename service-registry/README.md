@@ -8,10 +8,12 @@ With following dependencies:-
 
 ### @EnableEurekaServer
 - Add `@EnableEurekaServer` annotation to enable Eureka Server, by enabling this we are making it sure that this application will work as Eureka Server (service-registry).
-- Add the port on which this server should run :
+- Add the port on which this server should run : `8761`
 - This application is a server, we need to tell it not to connect to itself by adding some configurations in application.yml 
 
 ```yaml
+# application.yml
+
 spring:
   main:
     banner-mode: "off"
@@ -21,7 +23,7 @@ logging:
     file: "%d{dd-MM HH:mm} - %-5level - %logger{1} - %msg%n"
   level:
     root: INFO
-    
+
 # Service registry settings
 server:
   port: 8761
