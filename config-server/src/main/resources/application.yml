@@ -1,0 +1,17 @@
+server:
+  port: 8088
+  
+spring:
+  main:
+    banner-mode: "off"
+  profiles:
+    active: native
+
+logging:
+  pattern:
+    file: "%d{dd-MM HH:mm} - %-5level - %logger{1} - %msg%n"
+  level:
+    root: INFO
+
+
+  

@@ -1,0 +1,23 @@
+spring:
+  main:
+    banner-mode: "off"
+  profiles:
+    active: native
+
+logging:
+  pattern:
+    file: "%d{dd-MM HH:mm} - %-5level - %logger{1} - %msg%n"
+  level:
+    root: INFO
+
+server:
+  port: 8081
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+# management:
+#   tracing:
+#     sampling:
+#       probability: 1.0
